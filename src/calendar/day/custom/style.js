@@ -7,12 +7,12 @@ export default function styleConstructor(theme={}) {
   const appStyle = {...defaultStyle, ...theme};
   return StyleSheet.create({
     base: {
-      width: 32,
-      height: 32,
+      width: 34,
+      height: 34,
       alignItems: 'center'
     },
     text: {
-      marginTop: Platform.OS === 'android' ? 4 : 6,
+      marginTop: Platform.OS === 'android' ? 4 : 0,
       fontSize: appStyle.textDayFontSize,
       fontFamily: appStyle.textDayFontFamily,
       fontWeight: appStyle.textDayFontWeight,
@@ -20,11 +20,11 @@ export default function styleConstructor(theme={}) {
       backgroundColor: 'rgba(255, 255, 255, 0)'
     },
     alignedText: {
-      marginTop: Platform.OS === 'android' ? 4 : 6
+      marginTop: Platform.OS === 'android' ? 4 : 4
     },
     selected: {
       backgroundColor: appStyle.selectedDayBackgroundColor,
-      borderRadius: 16
+      borderRadius: 17
     },
     today: {
       backgroundColor: appStyle.todayBackgroundColor
